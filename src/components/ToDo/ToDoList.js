@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import './ToDoList.scss';
+import './ToDoList.css';
 import videoHomePage from "../../assets/bgv.mp4";
 import { TrashIcon } from "@heroicons/react/24/solid";
 import { ArrowDownIcon } from "@heroicons/react/24/solid";
