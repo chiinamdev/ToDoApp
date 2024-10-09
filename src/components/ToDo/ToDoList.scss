@@ -1,0 +1,79 @@
+.bgv{
+    position: fixed;
+    z-index: 9;
+    width: fit-content;
+    height: 100% !important;
+    bottom: 0px;
+    }
+.to-do-list{
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+    background: transparent;
+    margin: 100px;
+}
+
+h1{
+    font-size: 6rem;
+    font-weight: bold;
+    color: transparent;
+    text-transform: uppercase;
+}
+
+.btn{
+    font-size: 1.7rem;
+    font-weight: bold;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+    cursor: pointer;
+    transition: background-color 0.5 ease;
+    &-add{
+        background-color: hsl(120, 47%, 54%);
+    }
+    &-add:hover{
+        background-color: hsl(120, 47%, 44%);
+    }
+    &-del{
+        background-color: hsl(10, 90%, 54%);
+    }
+    &-del:hover{
+        background-color: hsl(10, 90%, 44%);
+    }
+    &-move{
+        background-color: hsl(207, 90%, 54%);
+    }
+    &-move:hover{
+        background-color: hsl(207, 90%, 44%);
+    }
+}
+
+.input{
+    font-size: 1.6rem;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.content{
+    font-size: 2rem;
+    list-style: none;
+    font-weight: bold;
+    margin-bottom: 10px;
+    background-color: white;
+    border: 3px solid black;
+    width: 70%;
+    margin: 20px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &-text{
+        max-width: 70%;
+        text-align: justify;
+        padding-left: 10px;
+    }
+}
