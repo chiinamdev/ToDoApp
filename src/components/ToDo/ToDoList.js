@@ -11,7 +11,6 @@ const ToDoList = () => {
   const [newTask, setNewTask] = useState("");
   const handleEventChange = (event) => setNewTask(event.target.value);
   
-
   const addTask = () =>{
     if(newTask.trim() !== '')
     {
@@ -19,6 +18,12 @@ const ToDoList = () => {
       setNewTask("");
     }
   }
+
+  const handleKeyPress = (event) => {
+    if (event.key === "Enter") {
+      addTask();
+    }
+  };
 
   const deletedTasks = (index) =>{
     const updeateTasks = tasks.filter((e, i) => i !== index);
@@ -69,6 +74,7 @@ const ToDoList = () => {
           placeholder="Enter a task....."
           value={newTask}
           onChange={handleEventChange}
+          onKeyPress={handleKeyPress}
         />
 
         <button className="btn btn-add" onClick={addTask}>
@@ -78,12 +84,12 @@ const ToDoList = () => {
         <ol>
           {tasks.map((task, index) => (
             <li className="content" key={index}>
-              <div className='content-text'>
+              <div className="content-text">
                 <span className="text">
                   {index + 1}. {task}
                 </span>
               </div>
-              <div className='content-button'>
+              <div className="content-button">
                 <button
                   className="btn btn-del"
                   onClick={() => deletedTasks(index)}
